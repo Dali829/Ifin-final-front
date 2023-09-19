@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-black '>
-      <img className='w-[250px] mx-auto my-4 pt-4' src={Logo} alt='/' />
+      <img className='w-[250px] mx-auto ml-0 pt-4' src={Logo} alt='/' />
 
       <ul className='hidden md:flex border-b-2 border-gray-400 '>
         <li className='p-5'>Accueil</li>

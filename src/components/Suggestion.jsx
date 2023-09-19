@@ -11,7 +11,7 @@ import Mercedes from '../assets/mercedes.avif'
 
 const Suggestion = () => {
     return (
-        <div className='w-full py-[10rem] px-4 bg-white'>
+        <div className='w-full py-[3rem] px-4 bg-white'>
             <h1 className='text-center font-bold mb-8 text-3xl'>Suggestions</h1>
             <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
 

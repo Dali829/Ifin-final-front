@@ -5,7 +5,7 @@ import Triple from '../assets/triple.png'
 
 const NosOffres = () => {
     return (
-        <div className='w-full py-[10rem] px-8 bg-white'>
+        <div className='w-full py-[4rem] px-8 bg-white'>
             <h1 className='text-center font-bold mb-10 text-3xl '>Nos Offres</h1>
 
             <div className='max-w-[900px] mx-auto grid md:grid-cols-2 gap-24 '>

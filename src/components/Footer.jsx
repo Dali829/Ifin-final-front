@@ -1,65 +1,52 @@
 import React from 'react';
-import {
-  FaDribbbleSquare,
-  FaFacebookSquare,
-  FaGithubSquare,
-  FaInstagram,
-  FaTwitterSquare,
-} from 'react-icons/fa';
+import Facebook from '../assets/facebook.png'
+import Insta from '../assets/instagram.png'
+import Linked from '../assets/linkedin.png'
+import Localisation from '../assets/location-pin.png'
+import Tel from '../assets/phone-call.png'
+import Email from '../assets/email.png'
 
 const Footer = () => {
   return (
-    <div className='max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
-      <div>
-        <h1 className='w-full text-3xl font-bold text-[#00df9a]'>REACT.</h1>
-        <p className='py-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id odit ullam iste repellat consequatur libero reiciendis, blanditiis accusantium.</p>
-        <div className='flex justify-between md:w-[75%] my-6'>
-            <FaFacebookSquare size={30} />
-            <FaInstagram size={30} />
-            <FaTwitterSquare size={30} />
-            <FaGithubSquare size={30} />
-            <FaDribbbleSquare size={30} />
+    <div className='bg-[#00df9a]'>
+    <div className='max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 text-base gap-8 '>
+      <div >
+        <h1 className='w-full text-3xl text-center'>Suivez notre actualité sur </h1>
+        <div className='flex justify-center'>
+          <div className='flex justify-between w-[50%] my-6'>
+            <img className='w-9' src={Insta} alt='/' />
+            <img className='w-9' src={Facebook} alt='/' />
+            <img className='w-9' src={Linked} alt='/' />
+          </div>
+        </div>
+        <p className='py-4'>
+          <div className='flex mb-2'><img className='w-8 h-8' src={Localisation} alt='/' /><p className='mt-1'><p className='font-bold'>Siège commercial : </p>Rue 8612 impasse n° 5, ZI Charguia 1.</p></div>
+          <div className='flex mb-2'><img className='w-8 h-8' src={Localisation} alt='/' /><p className='mt-1'><p className='font-bold'>Siège social :</p> 74 , Avenue de Carthage , Tunis 1001</p></div>
+          <div className='flex mb-2'><img className='w-8 h-8 mr-1' src={Tel} alt='/' /><p className='mt-1'>+216 58 576 510 / 31 34 20 20</p></div>
+          <div className='flex'><img className='w-8 h-8 mr-1' src={Email} alt='/' /><p className='mt-1'>contact@crc.tn</p></div>
+        </p>
+      </div>
+      <div className='lg:col-span-2  flex justify-evenly md:mt-24  uppercase'>
+        <div>
+          <h6 > </h6>
+          <ul style={{ listStyleType: 'disc' }}>
+            <li className='py-2'>à propos Tassheel</li>
+            <li className='py-2'>Reprise voiture</li>
+            <li className='py-2'>LOA et assurance auto</li>
+            <li className='py-2'>Financement auto</li>
+          </ul>
+        </div>
+        <div>
+          <ul style={{ listStyleType: 'disc' }}>
+            <li className='py-2'>Garanties et services</li>
+            <li className='py-2'>Garanties mécaniques</li>
+            <li className='py-2'>Garantie mécanique</li>
+            <li className='py-2'>Livraison</li>
+
+          </ul>
         </div>
       </div>
-      <div className='lg:col-span-2 flex justify-between mt-6'>
-    <div>
-        <h6 className='font-medium text-gray-400'>Solutions</h6>
-        <ul>
-            <li className='py-2 text-sm'>Analytics</li>
-            <li className='py-2 text-sm'>Marketing</li>
-            <li className='py-2 text-sm'>Commerce</li>
-            <li className='py-2 text-sm'>Insights</li>
-        </ul>
-    </div>
-    <div>
-        <h6 className='font-medium text-gray-400'>Support</h6>
-        <ul>
-            <li className='py-2 text-sm'>Pricing</li>
-            <li className='py-2 text-sm'>Documentation</li>
-            <li className='py-2 text-sm'>Guides</li>
-            <li className='py-2 text-sm'>API Status</li>
-        </ul>
-    </div>
-    <div>
-        <h6 className='font-medium text-gray-400'>Company</h6>
-        <ul>
-            <li className='py-2 text-sm'>About</li>
-            <li className='py-2 text-sm'>Blog</li>
-            <li className='py-2 text-sm'>Jobs</li>
-            <li className='py-2 text-sm'>Press</li>
-            <li className='py-2 text-sm'>Careers</li>
-        </ul>
-    </div>
-    <div>
-        <h6 className='font-medium text-gray-400'>Legal</h6>
-        <ul>
-            <li className='py-2 text-sm'>Claim</li>
-            <li className='py-2 text-sm'>Policy</li>
-            <li className='py-2 text-sm'>Terms</li>
-        </ul>
-    </div>
-      </div>
-    </div>
+    </div></div>
   );
 };
 
