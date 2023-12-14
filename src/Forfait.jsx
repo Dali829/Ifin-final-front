@@ -5,7 +5,7 @@ import Img2 from './assets/pexels-pixabay-63294.jpg'
 
 const Forfait = () => {
     return (
-        <div className='grid md:grid-cols-3 gap-2 md:mx-10'>
+        <div className='md:grid md:grid-cols-3 md:gap-2 md:mx-10'>
             <div className='col-span-2' >
                 <div className="grid md:grid-cols-2 gap-3 grid-col-2 m-4 ">
                     <div className="  text-right   uppercase">
@@ -45,15 +45,16 @@ const Forfait = () => {
                     </div>
                 </div>
             </div>
-            <div>
-
-                <img style={{ width: '400px', height: '200px' }}
-                    src={Img1}
-                    className='bg-cover mt-6 '
-                    alt="" />
-                <img style={{ width: '400px', height: '200px' }}
-                    src={Img2}
-                    className='bg-blend-darken mt-12' alt="" />
+            <div >
+                <div className='flex center justify-center'>
+                    <img style={{ height: '200px' }}
+                        src={Img1}
+                        className='bg-cover mt-6 w-[400px] '
+                        alt="" /></div>
+                <div className='flex center justify-center'>
+                    <img style={{ width: '400px', height: '200px' }}
+                        src={Img2}
+                        className='bg-blend-darken mt-12' alt="" /></div>
             </div>
         </div>
     )

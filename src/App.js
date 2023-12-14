@@ -1,31 +1,34 @@
-import React from 'react';
-import Analytics from './components/Analytics';
-import Cards from './components/Cards';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import Newsletter from './components/Newsletter';
-import QuiSommeNous from './components/QuiSommeNous';
-import Suggestion from './components/Suggestion';
-import NosOffres from './components/NosOffres';
-import Forfait from './Forfait';
-import Simulateur from './components/Simulateur';
+import React, { useEffect } from 'react';
+import Layout from './Layout/Layout';
+
 
 function App() {
+  const googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        autoDisplay: false
+      },
+      "google_translate_element"
+    );
+  };
+  
+  useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+    
+  }, []);
   return (
-    <div className='space-y-8'>
-      <Navbar/>
-      <Simulateur />
-      <NosOffres />
-      <Suggestion />
-      <QuiSommeNous />
-      <Forfait />
-      {/*<Hero />
-      <Analytics />
-      <Newsletter />
-  <Cards />*/}
-      <Footer />
-    </div>
+    
+    <>
+    <div id="google_translate_element"></div>
+      <Layout/>
+    </>
   );
 }
 

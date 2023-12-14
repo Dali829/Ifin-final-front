@@ -1,0 +1,73 @@
+import React, { useState } from 'react'
+import { FaCreditCard,FaMedal ,FaTicketAlt} from 'react-icons/fa'
+import { IoIosArrowForward ,IoIosSchool} from 'react-icons/io'
+import {ImAirplane} from 'react-icons/im'
+import {BsShopWindow} from 'react-icons/bs'
+
+
+
+const CreditCardBar = () => {
+    const [indexTab, setIndexTab] = useState(1);
+
+    const Data = [
+        {
+            index: 1,
+            name: "All Credit Cards",
+            icon: <FaCreditCard size={25} className='mr-2 text-[#f6921e]' />,
+            link: '#'
+
+        },
+        {
+            index: 2,
+            name: "Miles",
+            icon: <ImAirplane size={25} className='mr-2 text-[#f6921e]' />,
+            link: '#'
+        },
+        {
+            index: 3,
+            name: "No Fees Cards",
+            icon: <FaTicketAlt size={25} className='mr-2 text-[#f6921e]' />,
+            link: '#'
+        }, {
+            index: 4,
+            name: "Cards For Students",
+            icon: <IoIosSchool size={30} className='mr-2 text-[#f6921e]' />,
+            link: '#'
+        },
+        {
+            index: 5,
+            name: "Buisness Cards",
+            icon: <BsShopWindow size={25} className='mr-2 text-[#f6921e]' />,
+            link: '#'
+        },
+        {
+            index: 6,
+            name: "Cards with Bonuses",
+            icon: <FaMedal size={25} className='mr-2 text-[#f6921e]' />,
+            link: '#'
+        }
+    ]
+
+
+    return (
+        <div className='bg-[#0e5475] h-[60%]  w-full mt-[4%] py-8 px-[17%]'>
+            <p className='flex text-2xl mb-2 text-white'>Credit Card Application</p>
+            <div className='grid grid-cols-3 mb-4 gap-3'>
+
+                {
+                    Data.map(item =>
+                        <div onClick={() => setIndexTab(item.index)} style={item.index === indexTab ? { border: '2px solid #f6921e' } : { border: '' }} className='w-full bg-white p-3 flex justify-between'>
+                            <div className='flex'>  {item.icon}
+                                <p className='text-[#0e5475]'>{item.name}</p>
+                            </div>
+                            <IoIosArrowForward    style={item.index === indexTab ?  { visibility: 'visible' } : { visibility: 'hidden' } }  size={25} className='text-[#f6921e]' />
+                        </div>
+                    )
+                }
+
+            </div>
+        </div>
+    )
+}
+
+export default CreditCardBar

@@ -1,0 +1,36 @@
+input.largerCheckbox { 
+    width: 25px; 
+    height: 25px; 
+    border-radius:30% 30% 30% 30%;
+  
+    
+} 
+
+
+.MuiSlider-rail{
+  
+    color: white;
+}
+
+
+.MuiSlider-thumb{
+   
+    color: #0e5475;
+}
+
+
+.MuiSlider-track{
+   
+    color: #0e5475;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+

@@ -1,7 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700,500,400italic,500italic,700italic,300italic);
+
 
 body {
   background-color: white;
+  font-family: 'Roboto', sans-serif;
+
+
+
 }
+
+
